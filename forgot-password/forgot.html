@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/forgot-password/forgot-password-output.css">
+    <link rel="shortcut icon" href="/images/LeafBasket.png" type="image/x-icon">
+    <title>Forgot-password</title>
+    <style>
+        .bg-brand { background-color: #78b032; }
+        .bg-brand:hover { background-color: #064e3b; }
+        .text-brand { color: #78b032; }
+        .focus-ring-brand:focus { box-shadow: 0 0 0 2px #78b032; border-color: transparent; outline: none; }
+    </style>
+    <title>Document</title>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 w-full max-w-sm">
+    <img class="h-24 w-auto mx-auto object-contain" src="/images/LeafBasket text-logo.png" alt="LeafBasket Logo" >
+    <h2 class="text-2xl font-bold text-brand mb-2 text-center">Forgot Password?</h2>
+    <p class="text-sm text-gray-500 mb-6">Enter your email address and we'll send you a link to reset your password.</p>
+    
+    <form class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+        <input type="email" placeholder="me@example.com" class="w-full p-3 border rounded-xl outline-none focus-ring-brand">
+      </div>
+      
+      <button class="w-full bg-brand text-white py-3 rounded-xl font-bold transition mt-2">
+        Send Reset Link
+      </button>
+    </form>
+    
+
+    <p class="text-center text-sm mt-6 text-gray-600">
+      Remembered your password? <a href="/login/login.html" class="text-brand font-bold hover:underline">Back to Login</a>
+    </p>
+  </div>
+</body>
+</html>

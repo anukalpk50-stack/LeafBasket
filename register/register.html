@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="register-output.css">
+</head>
+    <body class="bg-gray-50 min-h-screen flex flex-col items-center justify-center p-4">
+  <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 w-full max-w-sm">
+    <div class="flex w-full justify-center mb-6">
+    <img src="/images/LeafBasket text-logo.png" alt="LeafBasket Logo" class="h-20">
+  </div>
+    <h2 class="text-2xl font-bold text-[#78b032] mb-6">Create Account</h2>
+    
+    
+    <form class="space-y-4">
+       <input type="email" placeholder="Email" class="w-full p-3 border rounded-xl outline-none focus:ring-2 focus:ring-[#78b032]">
+      <input type="tel" placeholder="Phone Number" class="w-full p-3 border rounded-xl outline-none focus:ring-2 focus:ring-[#78b032]">
+      <input type="password" placeholder="Confirm Password" class="w-full p-3 border rounded-xl outline-none focus:ring-2 focus:ring-[#78b032]">
+      
+      <div class="flex items-center text-sm">
+        <input type="checkbox" id="terms" required class="mr-2 focus:ring-2 focus:ring-[#78b032] outline-none">
+        <label for="terms" class="text-gray-600">I agree to the <a href="#" class="text-[#78b032] hover:underline">Terms & Conditions</a></label>
+       </div>
+
+       <button type="submit" class="w-full bg-[#78b032] text-white py-3 rounded-xl font-bold hover:bg-green-900 transition mt-2">Register</button>
+    </form>
+
+    <p class="text-center text-sm mt-6 text-gray-600">
+      Already have an account? <a href="/login/login.html" class="text-[#78b032] font-bold">Login</a>
+    </p>
+  </div>
+</body>
+</html>
