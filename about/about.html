@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../shop/shop.output.css">
+    <link rel="icon" type="image/png" href="../images/LeafBasket text-logo.png" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <title>About Us - LeafBasket</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+  rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<style>
+        body { background-color: #fff; color: #111; font-family: 'Inter', sans-serif; }
+        .accent-green { background-color: #1a5d2c; }
+        .text-accent { color: #026928; } /* Tailwind green-500 */
+        .card-bg { background-color: #b4ccbe; border: 1px solid #111; }
+    </style>
+    </head>
+<body class="min-h-screen bg-gray-50 text-gray-900">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+          <span class="text-green-700 font-bold"> <img src="../images/LeafBasket.png" alt="LeafBasket Logo"></span>
+        </div>
+        <span class="text-xl font-bold text-green-800">LeafBasket</span>
+      </div>
+
+      <div class="hidden md:flex items-center gap-8 font-medium text-gray-600">
+        <a href="../hero-page/hero.html" class="hover:text-green-700">Home</a>
+        <a href="../shop/shop.html" class="hover:text-green-700">Shop</a>
+        <a href="../about/about.html" class="hover:text-green-700">About</a>
+        <a href="../login/login.html" class="hover:text-green-700">Login</a>
+      </div>
+      <div class="flex items-center gap-6">
+       <a href="../cart/cart.html" class="relative">
+                <i class="ri-shopping-cart-2-line text-[25px] cursor-pointer hover:text-green-500"></i>
+                <span class="absolute -top-2 -right-2 bg-green-600 text-xs rounded-full px-1">0</span>
+            </a>
+      <button class="  hover:text-green-900 transition cursor-pointer" aria-label="Search" title="Search">
+        <i class="ri-search-line text-[25px]"></i>
+      </button>
+    </div>
+    </nav>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        
+        <section class="text-center mb-10">
+            <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6">Bringing Nature <span class="text-accent">Indoors</span></h2>
+            <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+                We believe every space deserves a touch of green. Since 2024, PlantShop has been dedicated to delivering high-quality, sustainably grown plants to your doorstep.
+            </p>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-12 items-center mb-20">
+            <div class="rounded-2xl overflow-hidden h-96">
+                <img src="../images/plants.jpg" 
+                     alt="Our Nursery" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold mb-4">Our Root Story</h3>
+                <p class="text-gray-400 mb-4">
+                    What started as a small hobby in a backyard nursery has grown into a community of plant lovers. We don't just sell plants; we provide the knowledge and tools needed to help them thrive.
+                </p>
+                <ul class="space-y-3">
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent"></i> 100% Organic Fertilizers</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent"></i> Locally Sourced Pots</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-accent"></i> 24/7 Plant Care Support</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20 text-center">
+            <div class="card-bg p-6 rounded-xl">
+                <div class="text-3xl font-bold text-accent mb-1">5k+</div>
+                <div class="text-gray-900 text-sm uppercase">Plants Sold</div>
+            </div>
+            <div class="card-bg p-6 rounded-xl">
+                <div class="text-3xl font-bold text-accent mb-1">200+</div>
+                <div class="text-gray-900 text-sm uppercase">Varieties</div>
+            </div>
+            <div class="card-bg p-6 rounded-xl">
+                <div class="text-3xl font-bold text-accent mb-1">15+</div>
+                <div class="text-gray-900 text-sm uppercase">Cities</div>
+            </div>
+            <div class="card-bg p-6 rounded-xl">
+                <div class="text-3xl font-bold text-accent mb-1">4.9/5</div>
+                <div class="text-gray-900 text-sm uppercase">Avg Rating</div>
+            </div>
+        </section>
+
+        <section class="accent-green p-10 rounded-3xl text-center mb-20">
+            <h2 class="text-2xl font-bold mb-4">Ready to start your green journey?</h2>
+            <a href="../shop/shop.html" class="bg-white cursor-pointer text-black px-8 py-3 rounded-full font-bold hover:bg-gray-200 transition">
+                Browse Shop
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-gray-900 pt-8 pb-12 text-center text-gray-500 text-sm">
+        <p>&copy; 2026 LeafBasket. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+</body>
+</html>

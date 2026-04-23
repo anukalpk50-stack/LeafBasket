@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../hero-page/hero-output.css">
+    <link rel="stylesheet" href="../shop/shop.output.css">
     <link rel="icon" type="image/png" href="../images/LeafBasket text-logo.png" />
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Shop - LeafBasket</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
   rel="stylesheet"/>
-    <title>LeafBasket</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <div class="min-h-screen bg-gray-50 text-gray-900">
-  
-  <header class="bg-white shadow-sm sticky top-0 z-50">
-    <nav class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-      
+<style>
+        body { background-color: #fff; color: #111; font-family: 'Inter', sans-serif; }
+        .accent-green { background-color: #1a5d2c; }
+        .hover-green:hover { background-color: #237a3a; }
+        .card-bg { background-color: #fff; border: 1px solid #222; }
+        .sidebar-item-active { background-color: #1a4d2e; border-radius: 8px; }
+</style>
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-900">
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
       <div class="flex items-center gap-2">
         <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
           <span class="text-green-700 font-bold"> <img src="../images/LeafBasket.png" alt="LeafBasket Logo"></span>
@@ -30,38 +36,53 @@
         <a href="../login/login.html" class="hover:text-green-700">Login</a>
       </div>
       <div class="flex items-center gap-6">
-      <a href="../cart/cart.html" class="relative">
+       <a href="../cart/cart.html" class="relative">
                 <i class="ri-shopping-cart-2-line text-[25px] cursor-pointer hover:text-green-500"></i>
-                <span class="absolute -top-2 -right-2 bg-green-600 text-xs rounded-full px-1"></span>
+                <span class="absolute -top-2 -right-2 bg-green-600 text-xs rounded-full px-1">0</span>
             </a>
       <button class="  hover:text-green-900 transition cursor-pointer" aria-label="Search" title="Search">
         <i class="ri-search-line text-[25px]"></i>
       </button>
     </div>
     </nav>
-  </header>
+    </header>
+    <div class="flex flex-col md:flex-row gap-8 p-4">
+        
+        <aside class="w-full md:w-64 shrink-0 px-4">
+            <h2 class="text-lg font-bold mb-4">Categories</h2>
+            <ul class="space-y-2 text-gray-600 mb-8">
+                <li class="sidebar-item-active p-2 px-4 text-white cursor-pointer">All Plants</li>
+                <li class="p-2 px-4 hover:text-black cursor-pointer">Indoor Plants</li>
+                <li class="p-2 px-4 hover:text-black cursor-pointer">Outdoor Plants</li>
+                <li class="p-2 px-4 hover:text-black cursor-pointer">Flowering Plants</li>
+                <li class="p-2 px-4 hover:text-black cursor-pointer">Succulents</li>
+                <li class="p-2 px-4 hover:text-black cursor-pointer">Pots & Planters</li>
+            </ul>
 
-  <main class="bg-[url('../images/hero-background.png')]  bg-cover bg-center object-cover h-180 w-auto
-   mx-auto px-4 py-8">
-   <!-- hero section -->
-    <section class="h-auto w-auto mt-5 ml-5">
-        <h2 class="text-green-600 font-medium font-sans text-8xl">
-            Bring Nature
-        </h2>
-        <h1 class="text-green-600  font-medium font-sans text-9xl">Indoors</h1>
-        <p class="text-green-600 font-medium font-sans text-4xl  mt-10">
-            Buy Your Favorite Plants Online
-        </p>
-       <a href="../shop/shop.html"><button class="bg-green-800 text-white px-6 py-2 rounded-full font-semibold hover:bg-green-900 transition mt-28 ml-10 cursor-pointer">Shop Now</button></a>
-      </section>
-  </main>
-  
-  <!-- feature section -->
-  <section class="py-16 max-w-7xl mx-auto w-full">
-    <h3 class="text-3xl font-bold text-green-800 mb-10 px-4 text-center">Featured Plants</h3>
-    
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
-      <!-- Plant Card 1 -->
+            <h2 class="text-lg font-bold mb-4">Price Range</h2>
+            <input type="range" class="w-full accent-green-600 mb-2" min="0" max="2000" title="Price Range">
+            <div class="flex justify-between text-xs text-gray-500 mb-6">
+                <span>₹0</span>
+                <span>₹2000</span>
+            </div>
+            <button class="w-full accent-green py-2 rounded-lg font-semibold hover-green transition">Filter</button>
+        </aside>
+
+        <main class="grow">
+            <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                <div class="relative grow">
+                    <i class="fas fa-search absolute left-4 top-3 text-black"></i>
+                    <input type="text" placeholder="Search for plants..." class="w-full bg-[#fff] border border-gray-800 rounded-lg py-2 pl-12 pr-4 focus:outline-none focus:border-green-600">
+                </div>
+                <select class="bg-white border border-gray-800 rounded-lg px-4 py-2 outline-none" aria-label="Sort options">
+                    <option>Sort by: Popular</option>
+                    <option>Price: Low to High</option>
+                    <option>Newest</option>
+                </select>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+         <!-- Plant Card 1 -->
       <div class="bg-white p-5 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition flex flex-col items-center">
         <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=400&q=80" alt="Monstera" class="w-full h-48 object-cover rounded-2xl mb-4 ">
         <h4 class="text-xl font-bold text-gray-800 w-full">Monstera</h4>
@@ -220,106 +241,46 @@
           <button class="bg-green-100 text-green-800 px-4 py-2 rounded-full cursor-pointer font-bold hover:bg-green-200 transition text-sm">Add</button>
         </div>
       </div>
-    </div>
-  </section>
+                <!-- <script>
+                    const plants = [
+                        { name: '', price: , rating: 4.7, img: 'https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&q=80&w=400' },
+                        { name: 'Fiddle Leaf Fig', price: 899, rating: 4.8, img: 'https://images.unsplash.com/photo-1597055181300-e3633a207519?auto=format&fit=crop&q=80&w=400' },
+                        { name: 'Spider Plant', price: 249, rating: 4.6, img: 'https://images.unsplash.com/photo-1545239351-ef35f43d514b?auto=format&fit=crop&q=80&w=400' },
+                        { name: 'Rubber Plant', price: 399, rating: 4.6, img: 'https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?auto=format&fit=crop&q=80&w=400' },
+                        { name: 'Areca Palm', price: 999, rating: 4.7, img: 'https://images.unsplash.com/photo-1512428815833-b40dd21046c5?auto=format&fit=crop&q=80&w=400' },
+                        { name: 'Bamboo Palm', price: 449, rating: 4.5, img: 'https://images.unsplash.com/photo-1501004318641-72e545395851?auto=format&fit=crop&q=80&w=400' }
+                    ];
 
-  <section class="bg-green-50 py-12 px-4">
-  <div class="max-w-7xl mx-auto">
-    <h2 class="text-2xl font-bold mb-6 text-center">Browse Categories</h2>
-    
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition">
-        <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=800&q=80" alt="Indoor Plants" class="w-full h-48 object-cover">
-        <div class="p-4 text-center font-bold text-lg">Indoor Plants</div>
-      </div>
+                    plants.forEach(p => {
+                        document.write(`
+                            <div class="card-bg rounded-xl overflow-hidden p-4 group cursor-pointer">
+                                <div class="h-64 overflow-hidden rounded-lg mb-4">
+                                    <img src="${p.img}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                </div>
+                                <h3 class="font-semibold text-lg">${p.name}</h3>
+                                <p class="text-white font-bold">₹${p.price}</p>
+                                <div class="flex items-center gap-1 text-yellow-500 text-xs my-2">
+                                    <i class="fas fa-star"></i> <span class="text-gray-400">${p.rating}</span>
+                                </div>
+                                <button class="w-full accent-green text-white py-2 rounded-lg mt-2 flex items-center justify-center gap-2 hover-green transition">
+                                    Add to Cart <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        `);
+                    });
+                </script> -->
+            </div>
 
-      <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition">
-        <img src="https://images.unsplash.com/photo-1584589167171-541ce45f1eea?auto=format&fit=crop&w=800&q=80" alt="Outdoor Plants" class="w-full h-48 object-cover">
-        <div class="p-4 text-center font-bold text-lg">Outdoor Plants</div>
-      </div>
+            <div class="flex justify-center items-center gap-2 mt-12 mb-8">
+                <button aria-label="Previous page" class="p-2 px-3 bg-white rounded border border-gray-800 hover:border-green-600"><i class="fas fa-chevron-left"></i></button>
+                <button class="p-2 px-4 accent-green rounded border border-green-600">1</button>
+                <button class="p-2 px-4 bg-white rounded border border-gray-800 hover:border-green-600">2</button>
+                <button class="p-2 px-4 bg-white rounded border border-gray-800 hover:border-green-600">3</button>
+                <button class="p-2 px-4 bg-white rounded border border-gray-800 hover:border-green-600">4</button>
+                <button aria-label="Next page" class="p-2 px-3 bg-white rounded border border-gray-800 hover:border-green-600"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </main>
+    </div>
 
-      <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition">
-        <img src="https://images.unsplash.com/photo-1620293106076-ad27d651efe3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG90c3xlbnwwfHwwfHx8MA%3D%3D" alt="Pots" class="w-full h-48 object-cover">
-        <div class="p-4 text-center font-bold text-lg">Pots</div>
-      </div>
-    </div>
-  </div>
-  </section>
-  <section class="max-w-6xl mx-auto px-4 py-16 md:py-24 text-center">
-    <img src="../images/LeafBasket wide.png" alt="LeafBasket Logo" class="w-54 h-24 object-contain mx-auto mb-6">
-    <h1 class="text-4xl md:text-5xl font-bold text-green-800 mb-4">Bringing Nature Home</h1>
-    <p class="text-lg text-gray-600 max-w-2xl mx-auto">LeafBasket is dedicated to bridging the gap between urban living and the tranquility of nature through curated indoor plants.</p>
-  </section>
-
-  <section class="bg-gray-50 py-16 md:py-24">
-    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8 md:gap-12">
-        <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition text-center flex flex-col items-center">
-        <div class="bg-green-50 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-green-700">
-          <i data-lucide="leaf"></i>
-        </div>
-        <h3 class="text-xl font-semibold mb-2">Sustainable Sourcing</h3>
-        <p class="text-gray-500">Every plant is ethically sourced and nurtured to ensure high quality and long life.</p>
-      </div>
-      <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition text-center flex flex-col items-center">
-        <div class="bg-green-50 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-green-700">
-          <i data-lucide="truck"></i>
-        </div>
-        <h3 class="text-xl font-semibold mb-2">Safe Delivery</h3>
-        <p class="text-gray-500">Our specialized packaging ensures your green friends arrive healthy and happy at your door.</p>
-      </div>
-      <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition text-center flex flex-col items-center">
-        <div class="bg-green-50 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-green-700">
-          <i data-lucide="heart"></i>
-        </div>
-        <h3 class="text-xl font-semibold mb-2">Plant Care Expert</h3>
-        <p class="text-gray-500">We provide lifetime care guides to help your indoor garden thrive effortlessly.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-green-900 text-green-50 py-12 mt-12">
-    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-      <div class="flex flex-col items-center text-center">
-        <div class="flex items-center justify-center gap-3 mb-6">
-          <div class="w-20 h-16 bg-white rounded-2xl flex items-center justify-center">
-            <img src="../images/LeafBasket wide.png" alt="LeafBasket Logo" class="w-16 h-10 object-contain">
-          </div>
-          <span class="text-2xl font-bold text-white">LeafBasket</span>
-        </div>
-        <p class="text-green-200 text-sm">Bringing nature indoors with sustainably sourced, beautiful plants delivered safely to your door.</p>
-      </div>
-      <div>
-        <h4 class="text-white font-bold mb-4">Quick Links</h4>
-        <ul class="space-y-2 text-sm text-green-200">
-          <li><a href="../hero-page/hero.html" class="hover:text-white transition">Home</a></li>
-          <li><a href="#" class="hover:text-white transition">Shop</a></li>
-          <li><a href="#" class="hover:text-white transition">About Us</a></li>
-          <li><a href="#" class="hover:text-white transition">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-white font-bold mb-4">Customer Service</h4>
-        <ul class="space-y-2 text-sm text-green-200">
-          <li><a href="#" class="hover:text-white transition">FAQ</a></li>
-          <li><a href="#" class="hover:text-white transition">Shipping & Returns</a></li>
-          <li><a href="#" class="hover:text-white transition">Plant Care Guide</a></li>
-          <li><a href="#" class="hover:text-white transition">Track Order</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-white font-bold mb-4">Newsletter</h4>
-        <p class="text-green-200 text-sm mb-4">Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
-        <div class="flex">
-          <input type="email" placeholder="Your email" class="w-full p-2 rounded-l-lg text-gray-900 outline">
-          <button class="bg-green-700 px-1 py-2 rounded-r-lg font-bold hover:bg-green-600 cursor-pointer transition">Subscribe</button>
-        </div>
-      </div>
-    </div>
-    <div class="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-green-800 text-sm text-center text-green-300">
-      &copy; 2026 LeafBasket. All rights reserved.
-    </div>
-  </footer>
-</div>
 </body>
 </html>
