@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/LeafBasket text-logo.png" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
+    <title>LeafBasket - Notifications</title>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans flex min-h-screen">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-green-900 text-white fixed h-full flex flex-col z-50 transition-all duration-300">
+        <div class="h-16 flex items-center px-6 border-b border-green-800">
+            <div class="flex items-center gap-2">
+                <img src="../images/LeafBasket.png" alt="LeafBasket Logo" class="w-8 h-8 bg-green-100 rounded-full p-1 object-contain">
+                <span class="text-xl font-bold tracking-wide">Admin Panel</span>
+            </div>
+        </div>
+        <nav class="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
+            <a href="Admin.html" class="flex items-center gap-3 hover:bg-green-800 px-4 py-3 rounded-xl transition text-green-100">
+                <i class="ri-dashboard-line text-lg"></i> <span class="font-medium">Dashboard</span>
+            </a>
+            <a href="products.html" class="flex items-center gap-3 hover:bg-green-800 px-4 py-3 rounded-xl transition text-green-100">
+                <i class="ri-plant-line text-lg"></i> <span class="font-medium">Products</span>
+            </a>
+            <a href="orders.html" class="flex items-center gap-3 hover:bg-green-800 px-4 py-3 rounded-xl transition text-green-100">
+                <i class="ri-shopping-cart-line text-lg"></i> <span class="font-medium">Orders</span>
+            </a>
+            <a href="customers.html" class="flex items-center gap-3 hover:bg-green-800 px-4 py-3 rounded-xl transition text-green-100">
+                <i class="ri-user-line text-lg"></i> <span class="font-medium">Customers</span>
+            </a>
+            <a href="settings.html" class="flex items-center gap-3 hover:bg-green-800 px-4 py-3 rounded-xl transition text-green-100">
+                <i class="ri-settings-4-line text-lg"></i> <span class="font-medium">Settings</span>
+            </a>
+        </nav>
+        <div class="p-4 border-t border-green-800">
+            <a href="../login/login.html" class="flex items-center gap-3 hover:bg-red-600 px-4 py-3 rounded-xl transition text-green-100 hover:text-white">
+                <i class="ri-logout-box-r-line text-lg"></i> <span class="font-medium">Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="ml-64 flex-1 flex flex-col w-full h-screen">
+        <!-- Header -->
+        <header class="h-16 bg-white shadow-sm flex items-center justify-between px-8 sticky top-0 z-40 shrink-0">
+            <h1 class="font-bold text-xl text-green-800">Notifications</h1>
+            <div class="flex items-center gap-6">
+                <a href="#" class="text-green-700 transition relative">
+                    <i class="ri-notification-3-fill text-2xl"></i>
+                </a>
+                <div class="flex items-center gap-3 cursor-pointer pl-6 border-l border-gray-200">
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=2d5a27&color=fff" alt="Admin Profile" class="w-9 h-9 rounded-full shadow-sm">
+                    <span class="font-medium text-sm text-gray-700">Store Admin</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page Content -->
+        <div class="p-8 max-w-4xl mx-auto w-full flex-1 overflow-hidden flex flex-col">
+            
+            <!-- Notifications Panel -->
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-100 flex flex-col h-full overflow-hidden">
+                <div class="px-8 py-5 border-b border-gray-100 flex justify-between items-center shrink-0 bg-gray-50/50">
+                    <div>
+                        <h3 class="font-bold text-lg text-gray-800">All Notifications</h3>
+                        <p class="text-sm text-gray-500 mt-1">You have 50 recent activities.</p>
+                    </div>
+                    <button class="text-green-700 text-sm hover:text-green-900 font-semibold transition">Mark all as read</button>
+                </div>
+                
+                <!-- Notification List (Scrollable) -->
+                <div class="overflow-y-auto flex-1">
+                    <div class="divide-y divide-gray-100">
+                        
+                        <!-- Orders (1-10) -->
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition bg-blue-50/20">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0"><i class="ri-shopping-cart-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-900">New Order #ORD-101</h4><p class="text-sm text-gray-600 mt-0.5">Order received from Aarav Sharma.</p><span class="text-xs text-gray-400 mt-1.5 block">Just now</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition bg-blue-50/20">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0"><i class="ri-shopping-cart-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-900">New Order #ORD-102</h4><p class="text-sm text-gray-600 mt-0.5">Order received from Vivaan Patel.</p><span class="text-xs text-gray-400 mt-1.5 block">5 mins ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0"><i class="ri-shopping-cart-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New Order #ORD-103</h4><p class="text-sm text-gray-600 mt-0.5">Order received from Aditya Kumar.</p><span class="text-xs text-gray-400 mt-1.5 block">12 mins ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0"><i class="ri-shopping-cart-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New Order #ORD-104</h4><p class="text-sm text-gray-600 mt-0.5">Order received from Vihaan Singh.</p><span class="text-xs text-gray-400 mt-1.5 block">22 mins ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0"><i class="ri-shopping-cart-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New Order #ORD-105</h4><p class="text-sm text-gray-600 mt-0.5">Order received from Arjun Gupta.</p><span class="text-xs text-gray-400 mt-1.5 block">35 mins ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0"><i class="ri-shopping-cart-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New Order #ORD-106</h4><p class="text-sm text-gray-600 mt-0.5">Order received from Sai Verma.</p><span class="text-xs text-gray-400 mt-1.5 block">1 hour ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0"><i class="ri-shopping-cart-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New Order #ORD-107</h4><p class="text-sm text-gray-600 mt-0.5">Order received from Reyansh Reddy.</p><span class="text-xs text-gray-400 mt-1.5 block">2 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0"><i class="ri-shopping-cart-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New Order #ORD-108</h4><p class="text-sm text-gray-600 mt-0.5">Order received from Ayaan Yadav.</p><span class="text-xs text-gray-400 mt-1.5 block">2 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0"><i class="ri-shopping-cart-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New Order #ORD-109</h4><p class="text-sm text-gray-600 mt-0.5">Order received from Krishna Shah.</p><span class="text-xs text-gray-400 mt-1.5 block">3 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0"><i class="ri-shopping-cart-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New Order #ORD-110</h4><p class="text-sm text-gray-600 mt-0.5">Order received from Ishaan Jain.</p><span class="text-xs text-gray-400 mt-1.5 block">4 hours ago</span></div>
+                        </div>
+
+                        <!-- Stock Alerts (11-20) -->
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-yellow-50 text-yellow-600 flex items-center justify-center shrink-0"><i class="ri-alert-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">Low Stock Alert</h4><p class="text-sm text-gray-600 mt-0.5">Monstera Deliciosa is running low (5 left).</p><span class="text-xs text-gray-400 mt-1.5 block">4 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-yellow-50 text-yellow-600 flex items-center justify-center shrink-0"><i class="ri-alert-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">Low Stock Alert</h4><p class="text-sm text-gray-600 mt-0.5">Snake Plant is running low (2 left).</p><span class="text-xs text-gray-400 mt-1.5 block">5 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-yellow-50 text-yellow-600 flex items-center justify-center shrink-0"><i class="ri-alert-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">Low Stock Alert</h4><p class="text-sm text-gray-600 mt-0.5">Aloe Vera is running low (8 left).</p><span class="text-xs text-gray-400 mt-1.5 block">5 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-yellow-50 text-yellow-600 flex items-center justify-center shrink-0"><i class="ri-alert-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">Out of Stock</h4><p class="text-sm text-gray-600 mt-0.5">Peace Lily is completely out of stock.</p><span class="text-xs text-gray-400 mt-1.5 block">6 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-yellow-50 text-yellow-600 flex items-center justify-center shrink-0"><i class="ri-alert-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">Low Stock Alert</h4><p class="text-sm text-gray-600 mt-0.5">Fiddle Leaf Fig is running low (1 left).</p><span class="text-xs text-gray-400 mt-1.5 block">6 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-yellow-50 text-yellow-600 flex items-center justify-center shrink-0"><i class="ri-alert-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">Low Stock Alert</h4><p class="text-sm text-gray-600 mt-0.5">Hibiscus is running low (3 left).</p><span class="text-xs text-gray-400 mt-1.5 block">7 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-yellow-50 text-yellow-600 flex items-center justify-center shrink-0"><i class="ri-alert-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">Low Stock Alert</h4><p class="text-sm text-gray-600 mt-0.5">Spider Plant is running low (4 left).</p><span class="text-xs text-gray-400 mt-1.5 block">7 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-yellow-50 text-yellow-600 flex items-center justify-center shrink-0"><i class="ri-alert-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">Out of Stock</h4><p class="text-sm text-gray-600 mt-0.5">Money Plant is completely out of stock.</p><span class="text-xs text-gray-400 mt-1.5 block">8 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-yellow-50 text-yellow-600 flex items-center justify-center shrink-0"><i class="ri-alert-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">Low Stock Alert</h4><p class="text-sm text-gray-600 mt-0.5">Jade Plant is running low (6 left).</p><span class="text-xs text-gray-400 mt-1.5 block">8 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-yellow-50 text-yellow-600 flex items-center justify-center shrink-0"><i class="ri-alert-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">Low Stock Alert</h4><p class="text-sm text-gray-600 mt-0.5">ZZ Plant is running low (7 left).</p><span class="text-xs text-gray-400 mt-1.5 block">9 hours ago</span></div>
+                        </div>
+
+                        <!-- Customers (21-30) -->
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-green-50 text-green-600 flex items-center justify-center shrink-0"><i class="ri-user-add-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New Customer Registration</h4><p class="text-sm text-gray-600 mt-0.5">Rohan Agarwal just created an account.</p><span class="text-xs text-gray-400 mt-1.5 block">10 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-green-50 text-green-600 flex items-center justify-center shrink-0"><i class="ri-user-add-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New Customer Registration</h4><p class="text-sm text-gray-600 mt-0.5">Aryan Mishra just created an account.</p><span class="text-xs text-gray-400 mt-1.5 block">11 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-green-50 text-green-600 flex items-center justify-center shrink-0"><i class="ri-user-add-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New Customer Registration</h4><p class="text-sm text-gray-600 mt-0.5">Veer Das just created an account.</p><span class="text-xs text-gray-400 mt-1.5 block">12 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-green-50 text-green-600 flex items-center justify-center shrink-0"><i class="ri-user-add-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New Customer Registration</h4><p class="text-sm text-gray-600 mt-0.5">Kabir Mehta just created an account.</p><span class="text-xs text-gray-400 mt-1.5 block">12 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-green-50 text-green-600 flex items-center justify-center shrink-0"><i class="ri-user-add-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New Customer Registration</h4><p class="text-sm text-gray-600 mt-0.5">Arnav Joshi just created an account.</p><span class="text-xs text-gray-400 mt-1.5 block">13 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-green-50 text-green-600 flex items-center justify-center shrink-0"><i class="ri-user-add-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New Customer Registration</h4><p class="text-sm text-gray-600 mt-0.5">Dev Khan just created an account.</p><span class="text-xs text-gray-400 mt-1.5 block">14 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-green-50 text-green-600 flex items-center justify-center shrink-0"><i class="ri-user-add-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New Customer Registration</h4><p class="text-sm text-gray-600 mt-0.5">Anay Prasad just created an account.</p><span class="text-xs text-gray-400 mt-1.5 block">15 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-green-50 text-green-600 flex items-center justify-center shrink-0"><i class="ri-user-add-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New Customer Registration</h4><p class="text-sm text-gray-600 mt-0.5">Aadi Iyer just created an account.</p><span class="text-xs text-gray-400 mt-1.5 block">16 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-green-50 text-green-600 flex items-center justify-center shrink-0"><i class="ri-user-add-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New Customer Registration</h4><p class="text-sm text-gray-600 mt-0.5">Shaurya Nair just created an account.</p><span class="text-xs text-gray-400 mt-1.5 block">17 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-green-50 text-green-600 flex items-center justify-center shrink-0"><i class="ri-user-add-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New Customer Registration</h4><p class="text-sm text-gray-600 mt-0.5">Dhruv Rao just created an account.</p><span class="text-xs text-gray-400 mt-1.5 block">18 hours ago</span></div>
+                        </div>
+
+                        <!-- Reviews (31-40) -->
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-orange-50 text-orange-600 flex items-center justify-center shrink-0"><i class="ri-star-fill text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New 5-Star Review</h4><p class="text-sm text-gray-600 mt-0.5">Rohan Agarwal reviewed Monstera.</p><span class="text-xs text-gray-400 mt-1.5 block">18 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-orange-50 text-orange-600 flex items-center justify-center shrink-0"><i class="ri-star-fill text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New 4-Star Review</h4><p class="text-sm text-gray-600 mt-0.5">Aryan Mishra reviewed Snake Plant.</p><span class="text-xs text-gray-400 mt-1.5 block">19 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-orange-50 text-orange-600 flex items-center justify-center shrink-0"><i class="ri-star-fill text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New 5-Star Review</h4><p class="text-sm text-gray-600 mt-0.5">Veer Das reviewed Aloe Vera.</p><span class="text-xs text-gray-400 mt-1.5 block">20 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-orange-50 text-orange-600 flex items-center justify-center shrink-0"><i class="ri-star-fill text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New 5-Star Review</h4><p class="text-sm text-gray-600 mt-0.5">Kabir Mehta reviewed Peace Lily.</p><span class="text-xs text-gray-400 mt-1.5 block">21 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-orange-50 text-orange-600 flex items-center justify-center shrink-0"><i class="ri-star-fill text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New 3-Star Review</h4><p class="text-sm text-gray-600 mt-0.5">Arnav Joshi reviewed Fiddle Leaf Fig.</p><span class="text-xs text-gray-400 mt-1.5 block">22 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-orange-50 text-orange-600 flex items-center justify-center shrink-0"><i class="ri-star-fill text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New 5-Star Review</h4><p class="text-sm text-gray-600 mt-0.5">Dev Khan reviewed Hibiscus.</p><span class="text-xs text-gray-400 mt-1.5 block">22 hours ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-orange-50 text-orange-600 flex items-center justify-center shrink-0"><i class="ri-star-fill text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New 4-Star Review</h4><p class="text-sm text-gray-600 mt-0.5">Anay Prasad reviewed Spider Plant.</p><span class="text-xs text-gray-400 mt-1.5 block">1 day ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-orange-50 text-orange-600 flex items-center justify-center shrink-0"><i class="ri-star-fill text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New 5-Star Review</h4><p class="text-sm text-gray-600 mt-0.5">Aadi Iyer reviewed Money Plant.</p><span class="text-xs text-gray-400 mt-1.5 block">1 day ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-orange-50 text-orange-600 flex items-center justify-center shrink-0"><i class="ri-star-fill text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New 5-Star Review</h4><p class="text-sm text-gray-600 mt-0.5">Shaurya Nair reviewed Jade Plant.</p><span class="text-xs text-gray-400 mt-1.5 block">1 day ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-orange-50 text-orange-600 flex items-center justify-center shrink-0"><i class="ri-star-fill text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">New 4-Star Review</h4><p class="text-sm text-gray-600 mt-0.5">Dhruv Rao reviewed ZZ Plant.</p><span class="text-xs text-gray-400 mt-1.5 block">1 day ago</span></div>
+                        </div>
+
+                        <!-- Payments (41-50) -->
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center shrink-0"><i class="ri-bank-card-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">Payment Received</h4><p class="text-sm text-gray-600 mt-0.5">₹2,499 received via UPI for #ORD-091.</p><span class="text-xs text-gray-400 mt-1.5 block">1 day ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center shrink-0"><i class="ri-bank-card-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">Payment Received</h4><p class="text-sm text-gray-600 mt-0.5">₹1,299 received via Card for #ORD-092.</p><span class="text-xs text-gray-400 mt-1.5 block">1 day ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center shrink-0"><i class="ri-bank-card-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">Payment Received</h4><p class="text-sm text-gray-600 mt-0.5">₹899 received via UPI for #ORD-093.</p><span class="text-xs text-gray-400 mt-1.5 block">2 days ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center shrink-0"><i class="ri-bank-card-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">Payment Failed</h4><p class="text-sm text-gray-600 mt-0.5">Payment of ₹599 failed for #ORD-094.</p><span class="text-xs text-gray-400 mt-1.5 block">2 days ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center shrink-0"><i class="ri-bank-card-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">Payment Received</h4><p class="text-sm text-gray-600 mt-0.5">₹1,499 received via Card for #ORD-095.</p><span class="text-xs text-gray-400 mt-1.5 block">2 days ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center shrink-0"><i class="ri-bank-card-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">Payment Received</h4><p class="text-sm text-gray-600 mt-0.5">₹799 received via UPI for #ORD-096.</p><span class="text-xs text-gray-400 mt-1.5 block">2 days ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center shrink-0"><i class="ri-bank-card-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">Payment Received</h4><p class="text-sm text-gray-600 mt-0.5">₹2,199 received via Net Banking for #ORD-097.</p><span class="text-xs text-gray-400 mt-1.5 block">3 days ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center shrink-0"><i class="ri-bank-card-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">Payment Refunded</h4><p class="text-sm text-gray-600 mt-0.5">₹999 refunded successfully to Customer.</p><span class="text-xs text-gray-400 mt-1.5 block">3 days ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center shrink-0"><i class="ri-bank-card-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">Payment Received</h4><p class="text-sm text-gray-600 mt-0.5">₹399 received via UPI for #ORD-099.</p><span class="text-xs text-gray-400 mt-1.5 block">3 days ago</span></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 hover:bg-gray-50 transition">
+                            <div class="w-10 h-10 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center shrink-0"><i class="ri-bank-card-line text-lg"></i></div>
+                            <div class="flex-1"><h4 class="text-sm font-semibold text-gray-800">Payment Received</h4><p class="text-sm text-gray-600 mt-0.5">₹1,199 received via Card for #ORD-100.</p><span class="text-xs text-gray-400 mt-1.5 block">4 days ago</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+</body>
+</html>

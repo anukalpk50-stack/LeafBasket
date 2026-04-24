@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/LeafBasket text-logo.png" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
+    <title>LeafBasket - Admin Dashboard</title>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans flex min-h-screen">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-green-900 text-white fixed h-full flex flex-col z-50 transition-all duration-300">
+        <div class="h-16 flex items-center px-6 border-b border-green-800">
+            <div class="flex items-center gap-2">
+                <i class="ri-leaf-fill text-2xl text-green-400"></i>
+                <span class="text-xl font-bold tracking-wide">Admin Panel</span>
+            </div>
+        </div>
+        <nav class="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
+            <a href="#" class="flex items-center gap-3 bg-green-800 px-4 py-3 rounded-xl transition">
+                <i class="ri-dashboard-line text-lg"></i> <span class="font-medium">Dashboard</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 hover:bg-green-800 px-4 py-3 rounded-xl transition text-green-100">
+                <i class="ri-plant-line text-lg"></i> <span class="font-medium">Products</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 hover:bg-green-800 px-4 py-3 rounded-xl transition text-green-100">
+                <i class="ri-shopping-cart-line text-lg"></i> <span class="font-medium">Orders</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 hover:bg-green-800 px-4 py-3 rounded-xl transition text-green-100">
+                <i class="ri-user-line text-lg"></i> <span class="font-medium">Customers</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 hover:bg-green-800 px-4 py-3 rounded-xl transition text-green-100">
+                <i class="ri-settings-4-line text-lg"></i> <span class="font-medium">Settings</span>
+            </a>
+        </nav>
+        <div class="p-4 border-t border-green-800">
+            <a href="../login/login.html" class="flex items-center gap-3 hover:bg-red-600 px-4 py-3 rounded-xl transition text-green-100 hover:text-white">
+                <i class="ri-logout-box-r-line text-lg"></i> <span class="font-medium">Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="ml-64 flex-1 flex flex-col w-full">
+        <!-- Header -->
+        <header class="h-16 bg-white shadow-sm flex items-center justify-between px-8 sticky top-0 z-40">
+            <h1 class="font-bold text-xl text-green-800">Overview</h1>
+            <div class="flex items-center gap-6">
+                <button class="text-gray-400 hover:text-green-700 transition relative">
+                    <i class="ri-notification-3-line text-2xl"></i>
+                    <span class="absolute top-0 right-0 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-white"></span>
+                </button>
+                <div class="flex items-center gap-3 cursor-pointer pl-6 border-l border-gray-200">
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=2d5a27&color=fff" alt="Admin Profile" class="w-9 h-9 rounded-full shadow-sm">
+                    <span class="font-medium text-sm text-gray-700">Store Admin</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="p-8 space-y-8 max-w-7xl mx-auto w-full">
+            <!-- Key Metrics -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 flex items-center gap-5 hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-green-50 text-green-700 rounded-full flex items-center justify-center text-3xl"><i class="ri-money-rupee-circle-line"></i></div>
+                    <div>
+                        <p class="text-gray-500 text-sm font-medium mb-1">Total Revenue</p>
+                        <h3 class="text-3xl font-bold text-gray-800">₹45,231</h3>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 flex items-center gap-5 hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-blue-50 text-blue-700 rounded-full flex items-center justify-center text-3xl"><i class="ri-shopping-bag-3-line"></i></div>
+                    <div>
+                        <p class="text-gray-500 text-sm font-medium mb-1">Active Orders</p>
+                        <h3 class="text-3xl font-bold text-gray-800">24</h3>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 flex items-center gap-5 hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-orange-50 text-orange-700 rounded-full flex items-center justify-center text-3xl"><i class="ri-plant-line"></i></div>
+                    <div>
+                        <p class="text-gray-500 text-sm font-medium mb-1">Total Products</p>
+                        <h3 class="text-3xl font-bold text-gray-800">128</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Orders Section -->
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+                <div class="px-8 py-5 border-b border-gray-100 flex justify-between items-center">
+                    <h3 class="font-bold text-lg text-gray-800">Recent Orders</h3>
+                    <a href="#" class="text-green-700 text-sm hover:text-green-900 font-semibold transition">View All Orders &rarr;</a>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-gray-50 text-gray-500 text-sm border-b border-gray-100">
+                                <th class="px-8 py-4 font-semibold">Order ID</th>
+                                <th class="px-8 py-4 font-semibold">Customer</th>
+                                <th class="px-8 py-4 font-semibold">Date</th>
+                                <th class="px-8 py-4 font-semibold">Status</th>
+                                <th class="px-8 py-4 font-semibold">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm divide-y divide-gray-100">
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-5 font-medium text-gray-900">#ORD-001</td>
+                                <td class="px-8 py-5 text-gray-700">John Doe</td>
+                                <td class="px-8 py-5 text-gray-500">Apr 24, 2025</td>
+                                <td class="px-8 py-5"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide">Delivered</span></td>
+                                <td class="px-8 py-5 font-bold text-gray-900">₹2,499</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-5 font-medium text-gray-900">#ORD-002</td>
+                                <td class="px-8 py-5 text-gray-700">Jane Smith</td>
+                                <td class="px-8 py-5 text-gray-500">Apr 24, 2025</td>
+                                <td class="px-8 py-5"><span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide">Processing</span></td>
+                                <td class="px-8 py-5 font-bold text-gray-900">₹1,299</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-5 font-medium text-gray-900">#ORD-003</td>
+                                <td class="px-8 py-5 text-gray-700">Mike Johnson</td>
+                                <td class="px-8 py-5 text-gray-500">Apr 23, 2025</td>
+                                <td class="px-8 py-5"><span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide">Shipped</span></td>
+                                <td class="px-8 py-5 font-bold text-gray-900">₹899</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

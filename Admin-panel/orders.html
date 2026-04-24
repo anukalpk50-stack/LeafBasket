@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/LeafBasket text-logo.png" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
+    <title>LeafBasket - Admin Orders</title>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans flex min-h-screen">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-green-900 text-white fixed h-full flex flex-col z-50 transition-all duration-300">
+        <div class="h-16 flex items-center px-6 border-b border-green-800">
+            <div class="flex items-center gap-2">
+                <img src="../images/LeafBasket.png" alt="LeafBasket Logo" class="w-8 h-8 bg-green-100 rounded-full p-1 object-contain">
+                <span class="text-xl font-bold tracking-wide">Admin Panel</span>
+            </div>
+        </div>
+        <nav class="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
+            <a href="Admin.html" class="flex items-center gap-3 hover:bg-green-800 px-4 py-3 rounded-xl transition text-green-100">
+                <i class="ri-dashboard-line text-lg"></i> <span class="font-medium">Dashboard</span>
+            </a>
+            <a href="products.html" class="flex items-center gap-3 hover:bg-green-800 px-4 py-3 rounded-xl transition text-green-100">
+                <i class="ri-plant-line text-lg"></i> <span class="font-medium">Products</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 bg-green-800 px-4 py-3 rounded-xl transition">
+                <i class="ri-shopping-cart-line text-lg"></i> <span class="font-medium">Orders</span>
+            </a>
+            <a href="customers.html" class="flex items-center gap-3 hover:bg-green-800 px-4 py-3 rounded-xl transition text-green-100">
+                <i class="ri-user-line text-lg"></i> <span class="font-medium">Customers</span>
+            </a>
+            <a href="settings.html" class="flex items-center gap-3 hover:bg-green-800 px-4 py-3 rounded-xl transition text-green-100">
+                <i class="ri-settings-4-line text-lg"></i> <span class="font-medium">Settings</span>
+            </a>
+        </nav>
+        <div class="p-4 border-t border-green-800">
+            <a href="../login/login.html" class="flex items-center gap-3 hover:bg-red-600 px-4 py-3 rounded-xl transition text-green-100 hover:text-white">
+                <i class="ri-logout-box-r-line text-lg"></i> <span class="font-medium">Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="ml-64 flex-1 flex flex-col w-full">
+        <!-- Header -->
+        <header class="h-16 bg-white shadow-sm flex items-center justify-between px-8 sticky top-0 z-40">
+            <h1 class="font-bold text-xl text-green-800">Orders Management</h1>
+            <div class="flex items-center gap-6">
+                <a href="notifications.html" class="text-gray-400 hover:text-green-700 transition relative">
+                    <i class="ri-notification-3-line text-2xl"></i>
+                </a>
+                <div class="flex items-center gap-3 cursor-pointer pl-6 border-l border-gray-200">
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=2d5a27&color=fff" alt="Admin Profile" class="w-9 h-9 rounded-full shadow-sm">
+                    <span class="font-medium text-sm text-gray-700">Store Admin</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page Content -->
+        <div class="p-8 space-y-6 max-w-7xl mx-auto w-full">
+            
+            <!-- Actions -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="relative w-full md:w-96">
+                    <i class="ri-search-line absolute left-4 top-3 text-gray-400"></i>
+                    <input type="text" placeholder="Search by Order ID or Customer..." class="w-full pl-11 pr-4 py-2 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent shadow-sm">
+                </div>
+            </div>
+
+            <!-- Orders Table -->
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-gray-50 text-gray-500 text-sm border-b border-gray-100">
+                                <th class="px-8 py-4 font-semibold">Order ID</th>
+                                <th class="px-8 py-4 font-semibold">Customer</th>
+                                <th class="px-8 py-4 font-semibold">Date</th>
+                                <th class="px-8 py-4 font-semibold">Status</th>
+                                <th class="px-8 py-4 font-semibold">Total</th>
+                                <th class="px-8 py-4 font-semibold text-right">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm divide-y divide-gray-100">
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-5 font-medium text-gray-900">#ORD-001</td>
+                                <td class="px-8 py-5 text-gray-700">Rajesh Sharma</td>
+                                <td class="px-8 py-5 text-gray-500">Oct 24, 2025</td>
+                                <td class="px-8 py-5"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide">Delivered</span></td>
+                                <td class="px-8 py-5 font-bold text-gray-900">₹2,499</td>
+                                <td class="px-8 py-4 text-right space-x-2">
+                                    <button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Order"><i class="ri-eye-line text-lg"></i></button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-5 font-medium text-gray-900">#ORD-002</td>
+                                <td class="px-8 py-5 text-gray-700">Priya Patel</td>
+                                <td class="px-8 py-5 text-gray-500">Oct 24, 2025</td>
+                                <td class="px-8 py-5"><span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide">Processing</span></td>
+                                <td class="px-8 py-5 font-bold text-gray-900">₹1,299</td>
+                                <td class="px-8 py-4 text-right space-x-2">
+                                    <button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Order"><i class="ri-eye-line text-lg"></i></button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-5 font-medium text-gray-900">#ORD-003</td>
+                                <td class="px-8 py-5 text-gray-700">Amit Kumar</td>
+                                <td class="px-8 py-5 text-gray-500">Oct 23, 2025</td>
+                                <td class="px-8 py-5"><span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide">Shipped</span></td>
+                                <td class="px-8 py-5 font-bold text-gray-900">₹899</td>
+                                <td class="px-8 py-4 text-right space-x-2">
+                                    <button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Order"><i class="ri-eye-line text-lg"></i></button>
+                                </td>
+                            </tr>
+                             <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-5 font-medium text-gray-900">#ORD-004</td>
+                                <td class="px-8 py-5 text-gray-700">Sneha Gupta</td>
+                                <td class="px-8 py-5 text-gray-500">Oct 22, 2025</td>
+                                <td class="px-8 py-5"><span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide">Cancelled</span></td>
+                                <td class="px-8 py-5 font-bold text-gray-900">₹599</td>
+                                <td class="px-8 py-4 text-right space-x-2">
+                                    <button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Order"><i class="ri-eye-line text-lg"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

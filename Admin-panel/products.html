@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/LeafBasket text-logo.png" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
+    <title>LeafBasket - Admin Products</title>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans flex min-h-screen">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-green-900 text-white fixed h-full flex flex-col z-50 transition-all duration-300">
+        <div class="h-16 flex items-center px-6 border-b border-green-800">
+            <div class="flex items-center gap-2">
+                <img src="../images/LeafBasket.png" alt="LeafBasket Logo" class="w-8 h-8 bg-green-100 rounded-full p-1 object-contain">
+                <span class="text-xl font-bold tracking-wide">Admin Panel</span>
+            </div>
+        </div>
+        <nav class="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
+            <a href="Admin.html" class="flex items-center gap-3 hover:bg-green-800 px-4 py-3 rounded-xl transition text-green-100">
+                <i class="ri-dashboard-line text-lg"></i> <span class="font-medium">Dashboard</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 bg-green-800 px-4 py-3 rounded-xl transition">
+                <i class="ri-plant-line text-lg"></i> <span class="font-medium">Products</span>
+            </a>
+            <a href="orders.html" class="flex items-center gap-3 hover:bg-green-800 px-4 py-3 rounded-xl transition text-green-100">
+                <i class="ri-shopping-cart-line text-lg"></i> <span class="font-medium">Orders</span>
+            </a>
+            <a href="customers.html" class="flex items-center gap-3 hover:bg-green-800 px-4 py-3 rounded-xl transition text-green-100">
+                <i class="ri-user-line text-lg"></i> <span class="font-medium">Customers</span>
+            </a>
+            <a href="settings.html" class="flex items-center gap-3 hover:bg-green-800 px-4 py-3 rounded-xl transition text-green-100">
+                <i class="ri-settings-4-line text-lg"></i> <span class="font-medium">Settings</span>
+            </a>
+        </nav>
+        <div class="p-4 border-t border-green-800">
+            <a href="../login/login.html" class="flex items-center gap-3 hover:bg-red-600 px-4 py-3 rounded-xl transition text-green-100 hover:text-white">
+                <i class="ri-logout-box-r-line text-lg"></i> <span class="font-medium">Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="ml-64 flex-1 flex flex-col w-full">
+        <!-- Header -->
+        <header class="h-16 bg-white shadow-sm flex items-center justify-between px-8 sticky top-0 z-40">
+            <h1 class="font-bold text-xl text-green-800">Products Management</h1>
+            <div class="flex items-center gap-6">
+                <a href="notifications.html" class="text-gray-400 hover:text-green-700 transition relative">
+                    <i class="ri-notification-3-line text-2xl"></i>
+                </a>
+                <div class="flex items-center gap-3 cursor-pointer pl-6 border-l border-gray-200">
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=2d5a27&color=fff" alt="Admin Profile" class="w-9 h-9 rounded-full shadow-sm">
+                    <span class="font-medium text-sm text-gray-700">Store Admin</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page Content -->
+        <div class="p-8 space-y-6 max-w-7xl mx-auto w-full">
+            
+            <!-- Actions -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="relative w-full md:w-96">
+                    <i class="ri-search-line absolute left-4 top-3 text-gray-400"></i>
+                    <input type="text" placeholder="Search products..." class="w-full pl-11 pr-4 py-2 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent shadow-sm">
+                </div>
+                <button class="w-full md:w-auto bg-green-800 text-white px-6 py-2.5 rounded-xl font-semibold hover:bg-green-900 transition shadow-sm flex items-center justify-center gap-2">
+                    <i class="ri-add-line"></i> Add New Product
+                </button>
+            </div>
+
+            <!-- Products Table -->
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-gray-50 text-gray-500 text-sm border-b border-gray-100">
+                                <th class="px-8 py-4 font-semibold">Product</th>
+                                <th class="px-8 py-4 font-semibold">Category</th>
+                                <th class="px-8 py-4 font-semibold">Price</th>
+                                <th class="px-8 py-4 font-semibold">Stock</th>
+                                <th class="px-8 py-4 font-semibold text-right">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm divide-y divide-gray-100">
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=100&q=80" alt="Monstera" class="w-12 h-12 rounded-lg object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Monstera Deliciosa</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">Indoor Plants</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹1,000</td>
+                                <td class="px-8 py-4"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide">45 in stock</span></td>
+                                <td class="px-8 py-4 text-right space-x-2">
+                                    <button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="Edit"><i class="ri-edit-box-line text-lg"></i></button>
+                                    <button class="text-red-600 hover:bg-red-50 p-2 rounded-lg transition" title="Delete"><i class="ri-delete-bin-line text-lg"></i></button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://images.unsplash.com/photo-1593482892290-f54927ae1bb6?auto=format&fit=crop&w=100&q=80" alt="Snake Plant" class="w-12 h-12 rounded-lg object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Snake Plant</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">Indoor Plants</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹1,500</td>
+                                <td class="px-8 py-4"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide">12 in stock</span></td>
+                                <td class="px-8 py-4 text-right space-x-2">
+                                    <button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="Edit"><i class="ri-edit-box-line text-lg"></i></button>
+                                    <button class="text-red-600 hover:bg-red-50 p-2 rounded-lg transition" title="Delete"><i class="ri-delete-bin-line text-lg"></i></button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://images.unsplash.com/photo-1684913127590-54e08d09a34b?w=100&auto=format&fit=crop&q=60" alt="Aloe Vera" class="w-12 h-12 rounded-lg object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Aloe Vera</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">Succulents</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹150</td>
+                                <td class="px-8 py-4"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide">30 in stock</span></td>
+                                <td class="px-8 py-4 text-right space-x-2">
+                                    <button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="Edit"><i class="ri-edit-box-line text-lg"></i></button>
+                                    <button class="text-red-600 hover:bg-red-50 p-2 rounded-lg transition" title="Delete"><i class="ri-delete-bin-line text-lg"></i></button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://images.unsplash.com/photo-1688248219979-29ae3d9133fe?w=100&auto=format&fit=crop&q=60" alt="Peace Lily" class="w-12 h-12 rounded-lg object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Peace Lily</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">Indoor Plants</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹500</td>
+                                <td class="px-8 py-4"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide">18 in stock</span></td>
+                                <td class="px-8 py-4 text-right space-x-2">
+                                    <button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="Edit"><i class="ri-edit-box-line text-lg"></i></button>
+                                    <button class="text-red-600 hover:bg-red-50 p-2 rounded-lg transition" title="Delete"><i class="ri-delete-bin-line text-lg"></i></button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://images.unsplash.com/photo-1592829848755-55d2f17574d3?w=100&auto=format&fit=crop&q=60" alt="Fiddle Leaf Fig" class="w-12 h-12 rounded-lg object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Fiddle Leaf Fig</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">Indoor Plants</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹199</td>
+                                <td class="px-8 py-4"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide">25 in stock</span></td>
+                                <td class="px-8 py-4 text-right space-x-2">
+                                    <button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="Edit"><i class="ri-edit-box-line text-lg"></i></button>
+                                    <button class="text-red-600 hover:bg-red-50 p-2 rounded-lg transition" title="Delete"><i class="ri-delete-bin-line text-lg"></i></button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://images.unsplash.com/photo-1664315474535-c8c8abc2dc71?w=100&auto=format&fit=crop&q=60" alt="Hibiscus" class="w-12 h-12 rounded-lg object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Hibiscus</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">Flowering Plants</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹199</td>
+                                <td class="px-8 py-4"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide">10 in stock</span></td>
+                                <td class="px-8 py-4 text-right space-x-2">
+                                    <button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="Edit"><i class="ri-edit-box-line text-lg"></i></button>
+                                    <button class="text-red-600 hover:bg-red-50 p-2 rounded-lg transition" title="Delete"><i class="ri-delete-bin-line text-lg"></i></button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://images.unsplash.com/photo-1608161779298-f42256d2c58d?w=100&auto=format&fit=crop&q=60" alt="Spider Plant" class="w-12 h-12 rounded-lg object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Spider Plant</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">Indoor Plants</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹199</td>
+                                <td class="px-8 py-4"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide">40 in stock</span></td>
+                                <td class="px-8 py-4 text-right space-x-2">
+                                    <button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="Edit"><i class="ri-edit-box-line text-lg"></i></button>
+                                    <button class="text-red-600 hover:bg-red-50 p-2 rounded-lg transition" title="Delete"><i class="ri-delete-bin-line text-lg"></i></button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://images.unsplash.com/photo-1623752862599-0cd2b003a26f?w=100&auto=format&fit=crop&q=60" alt="Money Plant" class="w-12 h-12 rounded-lg object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Money Plant</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">Indoor Plants</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹1,199</td>
+                                <td class="px-8 py-4"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide">22 in stock</span></td>
+                                <td class="px-8 py-4 text-right space-x-2">
+                                    <button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="Edit"><i class="ri-edit-box-line text-lg"></i></button>
+                                    <button class="text-red-600 hover:bg-red-50 p-2 rounded-lg transition" title="Delete"><i class="ri-delete-bin-line text-lg"></i></button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://images.unsplash.com/photo-1616189597001-9046fce2594d?w=100&auto=format&fit=crop&q=60" alt="Jade Plant" class="w-12 h-12 rounded-lg object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Jade Plant</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">Succulents</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹299</td>
+                                <td class="px-8 py-4"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide">35 in stock</span></td>
+                                <td class="px-8 py-4 text-right space-x-2">
+                                    <button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="Edit"><i class="ri-edit-box-line text-lg"></i></button>
+                                    <button class="text-red-600 hover:bg-red-50 p-2 rounded-lg transition" title="Delete"><i class="ri-delete-bin-line text-lg"></i></button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://images.unsplash.com/photo-1632207691143-643e2a9a9361?w=100&auto=format&fit=crop&q=60" alt="ZZ Plant" class="w-12 h-12 rounded-lg object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">ZZ Plant</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">Indoor Plants</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹899</td>
+                                <td class="px-8 py-4"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide">14 in stock</span></td>
+                                <td class="px-8 py-4 text-right space-x-2">
+                                    <button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="Edit"><i class="ri-edit-box-line text-lg"></i></button>
+                                    <button class="text-red-600 hover:bg-red-50 p-2 rounded-lg transition" title="Delete"><i class="ri-delete-bin-line text-lg"></i></button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://images.unsplash.com/photo-1600411832986-5a4477b64a1c?w=100&auto=format&fit=crop&q=60" alt="Pothos" class="w-12 h-12 rounded-lg object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Pothos</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">Indoor Plants</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹249</td>
+                                <td class="px-8 py-4"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide">50 in stock</span></td>
+                                <td class="px-8 py-4 text-right space-x-2">
+                                    <button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="Edit"><i class="ri-edit-box-line text-lg"></i></button>
+                                    <button class="text-red-600 hover:bg-red-50 p-2 rounded-lg transition" title="Delete"><i class="ri-delete-bin-line text-lg"></i></button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://images.unsplash.com/photo-1672062518782-706d6122c0e7?w=100&auto=format&fit=crop&q=60" alt="Rubber Plant" class="w-12 h-12 rounded-lg object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Rubber Plant</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">Indoor Plants</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹799</td>
+                                <td class="px-8 py-4"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide">15 in stock</span></td>
+                                <td class="px-8 py-4 text-right space-x-2">
+                                    <button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="Edit"><i class="ri-edit-box-line text-lg"></i></button>
+                                    <button class="text-red-600 hover:bg-red-50 p-2 rounded-lg transition" title="Delete"><i class="ri-delete-bin-line text-lg"></i></button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://images.unsplash.com/photo-1602923668104-8f9e03e77e62?w=100&auto=format&fit=crop&q=60" alt="Calathea" class="w-12 h-12 rounded-lg object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Calathea</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">Indoor Plants</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹999</td>
+                                <td class="px-8 py-4"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide">12 in stock</span></td>
+                                <td class="px-8 py-4 text-right space-x-2">
+                                    <button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="Edit"><i class="ri-edit-box-line text-lg"></i></button>
+                                    <button class="text-red-600 hover:bg-red-50 p-2 rounded-lg transition" title="Delete"><i class="ri-delete-bin-line text-lg"></i></button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://images.unsplash.com/photo-1615309363679-fed456ff8113?w=100&auto=format&fit=crop&q=60" alt="Areca Palm" class="w-12 h-12 rounded-lg object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Areca Palm</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">Indoor Plants</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹1,299</td>
+                                <td class="px-8 py-4"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide">8 in stock</span></td>
+                                <td class="px-8 py-4 text-right space-x-2">
+                                    <button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="Edit"><i class="ri-edit-box-line text-lg"></i></button>
+                                    <button class="text-red-600 hover:bg-red-50 p-2 rounded-lg transition" title="Delete"><i class="ri-delete-bin-line text-lg"></i></button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://media.istockphoto.com/id/1162493497/photo/image-of-modern-realistic-artificial-fern-as-fake-indoor-houseplant-fake-sword-boston-fern.webp?a=1&b=1&s=612x612&w=0&k=20&c=7gXZF5BOd8Q8mSMkXiCqCyrFCfnYhAkxElEHh6eTz4Q=" alt="Boston Fern" class="w-12 h-12 rounded-lg object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Boston Fern</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">Indoor Plants</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹499</td>
+                                <td class="px-8 py-4"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide">20 in stock</span></td>
+                                <td class="px-8 py-4 text-right space-x-2">
+                                    <button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="Edit"><i class="ri-edit-box-line text-lg"></i></button>
+                                    <button class="text-red-600 hover:bg-red-50 p-2 rounded-lg transition" title="Delete"><i class="ri-delete-bin-line text-lg"></i></button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://plus.unsplash.com/premium_photo-1676253694654-79c2214ccbc7?w=100&auto=format&fit=crop&q=60" alt="Orchid" class="w-12 h-12 rounded-lg object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Orchid</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">Flowering Plants</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹1,499</td>
+                                <td class="px-8 py-4"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide">5 in stock</span></td>
+                                <td class="px-8 py-4 text-right space-x-2">
+                                    <button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="Edit"><i class="ri-edit-box-line text-lg"></i></button>
+                                    <button class="text-red-600 hover:bg-red-50 p-2 rounded-lg transition" title="Delete"><i class="ri-delete-bin-line text-lg"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

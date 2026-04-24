@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/LeafBasket text-logo.png" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
+    <title>LeafBasket - Admin Customers</title>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans flex min-h-screen">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-green-900 text-white fixed h-full flex flex-col z-50 transition-all duration-300">
+        <div class="h-16 flex items-center px-6 border-b border-green-800">
+            <div class="flex items-center gap-2">
+                <img src="../images/LeafBasket.png" alt="LeafBasket Logo" class="w-8 h-8 bg-green-100 rounded-full p-1 object-contain">
+                <span class="text-xl font-bold tracking-wide">Admin Panel</span>
+            </div>
+        </div>
+        <nav class="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
+            <a href="Admin.html" class="flex items-center gap-3 hover:bg-green-800 px-4 py-3 rounded-xl transition text-green-100">
+                <i class="ri-dashboard-line text-lg"></i> <span class="font-medium">Dashboard</span>
+            </a>
+            <a href="products.html" class="flex items-center gap-3 hover:bg-green-800 px-4 py-3 rounded-xl transition text-green-100">
+                <i class="ri-plant-line text-lg"></i> <span class="font-medium">Products</span>
+            </a>
+            <a href="orders.html" class="flex items-center gap-3 hover:bg-green-800 px-4 py-3 rounded-xl transition text-green-100">
+                <i class="ri-shopping-cart-line text-lg"></i> <span class="font-medium">Orders</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 bg-green-800 px-4 py-3 rounded-xl transition">
+                <i class="ri-user-line text-lg"></i> <span class="font-medium">Customers</span>
+            </a>
+            <a href="settings.html" class="flex items-center gap-3 hover:bg-green-800 px-4 py-3 rounded-xl transition text-green-100">
+                <i class="ri-settings-4-line text-lg"></i> <span class="font-medium">Settings</span>
+            </a>
+        </nav>
+        <div class="p-4 border-t border-green-800">
+            <a href="../login/login.html" class="flex items-center gap-3 hover:bg-red-600 px-4 py-3 rounded-xl transition text-green-100 hover:text-white">
+                <i class="ri-logout-box-r-line text-lg"></i> <span class="font-medium">Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="ml-64 flex-1 flex flex-col w-full">
+        <!-- Header -->
+        <header class="h-16 bg-white shadow-sm flex items-center justify-between px-8 sticky top-0 z-40">
+            <h1 class="font-bold text-xl text-green-800">Customers Management</h1>
+            <div class="flex items-center gap-6">
+                <a href="notifications.html" class="text-gray-400 hover:text-green-700 transition relative">
+                    <i class="ri-notification-3-line text-2xl"></i>
+                </a>
+                <div class="flex items-center gap-3 cursor-pointer pl-6 border-l border-gray-200">
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=2d5a27&color=fff" alt="Admin Profile" class="w-9 h-9 rounded-full shadow-sm">
+                    <span class="font-medium text-sm text-gray-700">Store Admin</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page Content -->
+        <div class="p-8 space-y-6 max-w-7xl mx-auto w-full">
+            
+            <!-- Actions -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="relative w-full md:w-96">
+                    <i class="ri-search-line absolute left-4 top-3 text-gray-400"></i>
+                    <input type="text" placeholder="Search by name or email..." class="w-full pl-11 pr-4 py-2 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent shadow-sm">
+                </div>
+            </div>
+
+            <!-- Customers Table -->
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-gray-50 text-gray-500 text-sm border-b border-gray-100">
+                                <th class="px-8 py-4 font-semibold">Customer</th>
+                                <th class="px-8 py-4 font-semibold">Email</th>
+                                <th class="px-8 py-4 font-semibold">Join Date</th>
+                                <th class="px-8 py-4 font-semibold">Total Spent</th>
+                                <th class="px-8 py-4 font-semibold text-right">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm divide-y divide-gray-100">
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Aarav+Sharma&background=random" alt="Aarav Sharma" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Aarav Sharma</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">aarav.sharma@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Apr 20, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹8,500</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Vivaan+Patel&background=random" alt="Vivaan Patel" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Vivaan Patel</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">vivaan.patel@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Apr 19, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹12,300</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Aditya+Kumar&background=random" alt="Aditya Kumar" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Aditya Kumar</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">aditya.kumar@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Apr 18, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹4,200</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Vihaan+Singh&background=random" alt="Vihaan Singh" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Vihaan Singh</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">vihaan.singh@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Apr 17, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹21,000</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Arjun+Gupta&background=random" alt="Arjun Gupta" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Arjun Gupta</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">arjun.gupta@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Apr 16, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹1,500</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Sai+Verma&background=random" alt="Sai Verma" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Sai Verma</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">sai.verma@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Apr 15, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹950</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Reyansh+Reddy&background=random" alt="Reyansh Reddy" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Reyansh Reddy</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">reyansh.reddy@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Apr 14, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹3,400</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Ayaan+Yadav&background=random" alt="Ayaan Yadav" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Ayaan Yadav</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">ayaan.yadav@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Apr 13, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹1,250</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Krishna+Shah&background=random" alt="Krishna Shah" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Krishna Shah</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">krishna.shah@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Apr 12, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹7,800</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Ishaan+Jain&background=random" alt="Ishaan Jain" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Ishaan Jain</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">ishaan.jain@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Apr 11, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹5,600</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Rohan+Agarwal&background=random" alt="Rohan Agarwal" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Rohan Agarwal</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">rohan.agarwal@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Apr 10, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹2,100</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Aryan+Mishra&background=random" alt="Aryan Mishra" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Aryan Mishra</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">aryan.mishra@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Apr 09, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹1,900</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Veer+Das&background=random" alt="Veer Das" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Veer Das</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">veer.das@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Apr 08, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹11,500</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Kabir+Mehta&background=random" alt="Kabir Mehta" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Kabir Mehta</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">kabir.mehta@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Apr 07, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹6,200</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Arnav+Joshi&background=random" alt="Arnav Joshi" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Arnav Joshi</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">arnav.joshi@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Apr 06, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹3,300</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Dev+Khan&background=random" alt="Dev Khan" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Dev Khan</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">dev.khan@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Apr 05, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹890</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Anay+Prasad&background=random" alt="Anay Prasad" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Anay Prasad</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">anay.prasad@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Apr 04, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹4,100</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Aadi+Iyer&background=random" alt="Aadi Iyer" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Aadi Iyer</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">aadi.iyer@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Apr 03, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹1,750</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Shaurya+Nair&background=random" alt="Shaurya Nair" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Shaurya Nair</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">shaurya.nair@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Apr 02, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹2,800</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Dhruv+Rao&background=random" alt="Dhruv Rao" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Dhruv Rao</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">dhruv.rao@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Apr 01, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹9,900</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                             <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Advik+Patil&background=random" alt="Advik Patil" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Advik Patil</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">advik.patil@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Mar 30, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹500</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Ryan+Desai&background=random" alt="Ryan Desai" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Ryan Desai</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">ryan.desai@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Mar 29, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹1,200</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Atharv+Bhatt&background=random" alt="Atharv Bhatt" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Atharv Bhatt</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">atharv.bhatt@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Mar 28, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹3,700</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Ritvik+Pandya&background=random" alt="Ritvik Pandya" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Ritvik Pandya</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">ritvik.pandya@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Mar 27, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹1,100</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Laksh+Thakur&background=random" alt="Laksh Thakur" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Laksh Thakur</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">laksh.thakur@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Mar 26, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹4,900</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <!-- Add 25 more customers -->
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Aarush+Sharma&background=random" alt="Aarush Sharma" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Aarush Sharma</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">aarush.sharma@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Mar 25, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹2,300</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Ishan+Patel&background=random" alt="Ishan Patel" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Ishan Patel</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">ishan.patel@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Mar 24, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹6,700</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Jai+Kumar&background=random" alt="Jai Kumar" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Jai Kumar</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">jai.kumar@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Mar 23, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹1,000</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Om+Singh&background=random" alt="Om Singh" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Om Singh</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">om.singh@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Mar 22, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹8,800</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Parth+Gupta&background=random" alt="Parth Gupta" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Parth Gupta</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">parth.gupta@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Mar 21, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹14,200</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                             <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Shivansh+Verma&background=random" alt="Shivansh Verma" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Shivansh Verma</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">shivansh.verma@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Mar 20, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹3,100</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Siddharth+Reddy&background=random" alt="Siddharth Reddy" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Siddharth Reddy</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">siddharth.reddy@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Mar 19, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹5,500</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Ansh+Yadav&background=random" alt="Ansh Yadav" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Ansh Yadav</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">ansh.yadav@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Mar 18, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹750</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Rudra+Shah&background=random" alt="Rudra Shah" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Rudra Shah</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">rudra.shah@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Mar 17, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹1,800</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition">
+                                <td class="px-8 py-4 flex items-center gap-4">
+                                    <img src="https://ui-avatars.com/api/?name=Yuvraj+Jain&background=random" alt="Yuvraj Jain" class="w-10 h-10 rounded-full object-cover border border-gray-100">
+                                    <span class="font-bold text-gray-900">Yuvraj Jain</span>
+                                </td>
+                                <td class="px-8 py-4 text-gray-600">yuvraj.jain@example.com</td>
+                                <td class="px-8 py-4 text-gray-500">Mar 16, 2025</td>
+                                <td class="px-8 py-4 font-bold text-gray-900">₹9,100</td>
+                                <td class="px-8 py-4 text-right space-x-2"><button class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition" title="View Details"><i class="ri-eye-line text-lg"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
